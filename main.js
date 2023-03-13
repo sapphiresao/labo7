@@ -1,4 +1,3 @@
-const title = document.createElement('h1');
 title.textContent = 'Lab7 Assignment';
 title.style.color = 'blue';
 document.body.appendChild(title);
