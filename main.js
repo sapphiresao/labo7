@@ -1,6 +1,9 @@
+document.getElementById('title').style.color = 'blue';
 document.getElementById('title').textContent = 'Lab7 Assignment';
 
 document.getElementById('task').textContent = 'Task';
+document.getElementById('task').style.color = 'red';
+document.getElementById('task').insertAdjacentHTML('afterend', '<p style="color: red;">In this task you have to reproduce this HTML page as is using only JavaScript. The task will be evaluated on the basis of the following DOM manipulation techniques:</p>');
 
 const taskList = document.getElementById('taskList');
 const tasks = [
@@ -12,7 +15,7 @@ const tasks = [
   { text: 'change classes of the elements (5 points)', color: 'purple', class: 'odd' },
 ];
 
-tasks.forEach((task, index) => {
+tasks.forEach((task) => {
   const listItem = document.createElement('li');
   listItem.textContent = task.text;
   listItem.style.color = task.color;
@@ -20,7 +23,8 @@ tasks.forEach((task, index) => {
   taskList.appendChild(listItem);
 });
 
-document.getElementById('submission').textContent = 'Submission';
+document.getElementById('submission').style.color = 'red';
+document.getElementById('submission').insertAdjacentHTML('afterend', '<p style="color: red;">To submit your work, follow these instructions:</p>');
 
 const submissionList = document.getElementById('submissionList');
 const submissionSteps = [
@@ -33,7 +37,7 @@ const submissionSteps = [
 { text: 'After you finish your work, submit it to the Github (2 points)', color: 'green', class: 'even' },
 ];
 
-submissionSteps.forEach((step, index) => {
+submissionSteps.forEach((step) => {
     const li = document.createElement('li');
     li.innerText = step.text;
     li.style.color = step.color;
@@ -41,4 +45,3 @@ submissionSteps.forEach((step, index) => {
     submissionList.appendChild(li);
     });
 
-    
